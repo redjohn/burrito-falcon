@@ -1,0 +1,28 @@
+{
+  "name": "Burrito Falconizr",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Spreads the gospel of the holy burrito falcon",
+  "homepage_url": "http://www.1077theend.com/sites/g/files/giy596/f/Blogs/burrito-falcon-small.jpg",
+  "icons": {
+    "16": "icons/falcon16.png",
+    "48": "icons/falcon48.png",
+    "128": "icons/falcon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "*://*.lds.org/*",
+    "*://lds.org/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.lds.org/*",
+        "*://lds.org/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
